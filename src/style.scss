@@ -36,6 +36,35 @@ h2{
   font-size: 0.8vw;
   margin: 0;
 }
+a{
+  z-index: 20;
+  cursor: pointer;
+}
+
+a:link, a:visited, a:active {
+ color: #E8FBFF;
+  text-decoration: none;
+}
+
+a:hover, a:hover > h2{
+  color: #E8FBFF;
+  font-weight: 700;
+}
+
+.tab{
+  animation: flicker 3s infinite;
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
 
 .hero{
   text-align: center;
@@ -60,7 +89,7 @@ h2{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 8vw;
+  width: 10vw;
   padding: 0 5% 0 5%;
   animation:
     blur 6s infinite,
@@ -69,6 +98,23 @@ h2{
 
 .language-option{
   text-align: right;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100vw;
+  top: 6%;
+}
+
+.short{
+  width: 30vw;
+  text-align: right;
+}
+
+.short, .stage{
+  padding: 0 5% 0 5%;
+  animation: blur 6s infinite, flick-option 2ms infinite;
 }
 
 .footer{
@@ -236,10 +282,10 @@ h2{
 }
 
 #cursor{
-  background-color: #E8FBFF;
-  width: 7px;
-  height: 11px;
+  background-color: black;
+  width: 4px;
+  height: 10px;
   margin: 0 auto;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-bottom: -2px;
+  display: flex;
 }

@@ -27,6 +27,7 @@ h1{
   font-family: "Hyperconnectionv2";
   font-size: 3vw;
   margin: 0;
+  letter-spacing: 2px;
 }
 
 h2{
@@ -75,7 +76,7 @@ h2{
   justify-content: space-between;
   position: absolute;
   width: 100vw;
-  bottom: 10%;
+  bottom: 6%;
 }
 
 @keyframes blur {
@@ -185,7 +186,7 @@ h2{
     opacity: 0.85;
   }
   50% {
-    filter: blur(1px);
+    filter: blur(2px);
     opacity: 0.95;
   }
   100% {
@@ -230,3 +231,15 @@ h2{
   }
 }
 
+.typescript{
+  color: red;
+}
+
+#cursor{
+  background-color: #E8FBFF;
+  width: 7px;
+  height: 11px;
+  margin: 0 auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}

@@ -307,6 +307,7 @@ a:hover, a:hover > h2{
     background-color: lightblue;
     padding: 2px 7px 3px 7px;
     color: black;
+    margin-right: 10px;
     border-radius: 240px;
   }
 
@@ -318,4 +319,11 @@ a:hover, a:hover > h2{
   .secondary-quest{
     opacity: 0.25;
   }
+}
+
+.square-label {
+  border: 1px solid;
+  padding: 9px 4px 9px 6px;
+  border-radius: 3px;
+  margin-right: 10px;
 }

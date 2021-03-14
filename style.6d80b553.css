@@ -1,0 +1,308 @@
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: black;
+  color: #E8FBFF;
+  margin: 0;
+  position: relative;
+  height: 100vh;
+  animation: blue-me 5s infinite;
+}
+
+@font-face {
+  font-family: "Hyperconnectionv2";
+  src: url("/hyperconnectionv2-regular.99cffc48.ttf") format("ttf");
+}
+@font-face {
+  font-family: "GT America";
+  src: url("/GT-America-Regular.a73d14f6.OTF") format("otf");
+}
+h1, h2 {
+  text-shadow: 0 0 10px #E8FBFF, -13px -14px 4px rgba(206, 89, 55, 0.02);
+}
+
+h1 {
+  font-family: "Hyperconnectionv2";
+  font-size: 3vw;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: "GT America";
+  font-weight: 400;
+  font-size: 0.8vw;
+  margin: 0;
+}
+
+a {
+  z-index: 20;
+  cursor: pointer;
+}
+
+a:link, a:visited, a:active {
+  color: #E8FBFF;
+  text-decoration: none;
+}
+
+a:hover, a:hover > h2 {
+  color: #E8FBFF;
+  font-weight: 700;
+}
+
+.tab {
+  animation: flicker 3s infinite;
+}
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero {
+  text-align: center;
+  position: absolute;
+  height: auto;
+  margin-top: -3em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: blur 7s infinite, flick-title 5ms infinite;
+}
+
+.subtitle {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.option {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 10vw;
+  padding: 0 5% 0 5%;
+  margin-top: 20px;
+  animation: blur 6s infinite, flick-option 2ms infinite;
+}
+
+.multiple-option {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100vw;
+  top: 6%;
+}
+
+.short {
+  width: 30vw;
+  text-align: right;
+}
+
+.short, .stage {
+  padding: 0 5% 0 5%;
+  animation: blur 6s infinite, flick-option 3ms infinite;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100vw;
+  bottom: 6%;
+}
+
+@keyframes blur {
+  44% {
+    filter: blur(0px);
+  }
+  45% {
+    filter: blur(2px);
+  }
+  46% {
+    filter: blur(0px);
+  }
+}
+@keyframes flick {
+  50% {
+    left: 2px;
+  }
+  51% {
+    left: 0;
+  }
+}
+@keyframes flick-title {
+  40% {
+    opacity: 0.6;
+    transform: skew(0, 0) translate(-50%, -50%);
+  }
+  41% {
+    opacity: 0.5;
+    transform: skew(50deg, 0) translate(-50%, -50%);
+  }
+  42% {
+    opacity: 0.7;
+    transform: skew(-40deg, 0) translate(-50%, -50%);
+  }
+  43% {
+    opacity: 1;
+    transform: skew(0, 0) translate(-50%, -50%);
+  }
+}
+@keyframes flick-option {
+  40% {
+    opacity: 0.8;
+    transform: skew(0, 0);
+  }
+  41% {
+    opacity: 0.9;
+    transform: skew(50deg, 0);
+  }
+  42% {
+    opacity: 0.9;
+    transform: skew(-80deg, 0);
+  }
+  43% {
+    opacity: 1;
+    transform: skew(0, 0);
+  }
+}
+.screen-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  position: relative;
+  z-index: 10;
+  animation: appear 3s infinite, big-jump 5ms infinite;
+}
+.line .white {
+  background: black;
+  position: relative;
+  left: 0;
+  margin: 0 0 5% 0;
+  height: 10px;
+}
+.line .red {
+  background: black;
+  position: relative;
+  left: 0;
+  margin: 0 0 2.5% 0;
+  height: 10px;
+}
+.line .green {
+  background: black;
+  position: relative;
+  left: 0;
+  margin: 6% 0 12% 0;
+  height: 10px;
+}
+
+@keyframes appear {
+  0% {
+    filter: blur(0px);
+    opacity: 0.85;
+  }
+  50% {
+    filter: blur(2px);
+    opacity: 0.95;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 0.85;
+  }
+}
+@keyframes big-jump {
+  0% {
+    top: -45vh;
+  }
+  10% {
+    top: -55vh;
+  }
+  17% {
+    top: -48vh;
+  }
+  25% {
+    top: -5vh;
+  }
+  35% {
+    top: -40vh;
+  }
+  55% {
+    top: -70vh;
+  }
+  63% {
+    top: -55vh;
+  }
+  75% {
+    top: -10vh;
+  }
+  84% {
+    top: -5vh;
+  }
+  90% {
+    top: -30vh;
+  }
+  100% {
+    top: -45vh;
+  }
+}
+.typescript {
+  color: red;
+}
+
+#cursor {
+  background-color: black;
+  width: 4px;
+  height: 10px;
+  margin: 0 auto;
+  margin-bottom: -2px;
+  display: flex;
+}
+
+.quest {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100vw;
+  top: 20%;
+  animation: blur 6s infinite, flick-option 3ms infinite;
+}
+.quest .round-label {
+  background-color: #E8FBFF;
+  padding: 2px 7px 3px 7px;
+  color: black;
+  margin-right: 10px;
+  border-radius: 240px;
+}
+.quest h2 {
+  padding: 0 5% 0 5%;
+  margin: 10px 0 10px 0;
+}
+.quest .secondary-quest {
+  opacity: 0.25;
+}
+
+.square-label {
+  border: 1px solid;
+  padding: 9px 4px 9px 6px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=/style.6d80b553.css.map */
